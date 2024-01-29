@@ -16,6 +16,7 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import { TestimonialCard } from "@/widgets/cards/testimonialCard";
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 export function Home() {
   return (
@@ -39,8 +40,19 @@ export function Home() {
             </div>
           </div>
         </div>
+        <FloatingWhatsApp
+        phoneNumber="+923006039666"
+        accountName="Mahnoor"
+        allowEsc
+        allowClickAway
+        notification
+        notificationSound
+      />
+
+
       </div>
       <section className="-mt-32 bg-white px-4 pb-20 pt-4">
+
         <div className="container mx-auto">
           {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -55,6 +67,9 @@ export function Home() {
               />
             ))}
           </div> */}
+
+
+
           <div className="mt-32 flex flex-wrap items-center p-10">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
               <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
@@ -109,7 +124,7 @@ export function Home() {
                 name={name}
                 position={position}
                 socials={
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 ">
                     {socials.map(({ color, name }) => (
                       <IconButton key={name} color={color} variant="text">
                         <i className={`fa-brands text-xl fa-${name}`} />
@@ -129,11 +144,12 @@ export function Home() {
 
         <div className="container p-4 flex ">
 
-          <div className="mx-auto  w-5/12 ">
+          <div className="mx-auto rounded-lg w-5/12 px-12">
             <img
               className=""
-              src="https://show.moxcreative.com/carbon/wp-content/uploads/sites/61/2023/03/mechanics-working-in-auto-service-1024x684.jpg">
-            </img>
+                src="https://show.moxcreative.com/carbon/wp-content/uploads/sites/61/2023/03/checking-motor-in-car-service.jpg"
+                >
+              </img>
           </div>
 
           <div>
@@ -146,35 +162,39 @@ export function Home() {
 
               <div className="mt-28 max-w-[14rem] ">
 
-                <Card className="overflow-hidden p-5 m-2 rounded-md ">
+                <Card className="overflow-hidden p-2 m-2 rounded-md ">
                   <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
+                  <img src="img\fast-delivery.png"className="p-4"  />
+                    <Typography variant="h5" color="blue-gray" className="mb-2 mt-2 text-center">
                       Fast Work and Service </Typography>
 
                   </CardBody>
 
                 </Card>
-                <Card className="p-5 m-2 rounded-md">
+                <Card className="p-2 m-2 rounded-md">
                   <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
+                  <img src="img\trust.png" className="p-3"  />
+                    <Typography variant="h5" color="blue-gray" className="mb-2 mt-2 text-center">
                       Trusted Provider </Typography>
                   </CardBody>
 
                 </Card>
               </div>
               <div className="mt-28 max-w-[14rem]">
-                <Card className="m-2 p-5 rounded-md">
+                <Card className="m-2 p-2 rounded-md overflow-hidden ">
                   <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
+                  <img src="img\mechanic.jpg" className="p-4" />
+                    <Typography variant="h5" color="blue-gray" className="mb-2 mt-2 text-center">
                       Expert Mechanics
                     </Typography>
 
                   </CardBody>
 
                 </Card>
-                <Card className="m-2  p-5 rounded-md">
+                <Card className="m-2 p-2 rounded-md">
                   <CardBody>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
+                  <img src="img\best-price.png" className="p-4" />
+                    <Typography variant="h5" color="blue-gray" className="mb-2 mt-2 text-center">
                       Reasonable Price
                     </Typography>
                   </CardBody>
